@@ -3,7 +3,7 @@ const baseUrl = '/api/blogs'
 
 let auth = null
 
-const setToken = (newToken) => {
+const setToken = newToken => {
   auth = `Bearer ${newToken}`
 }
 
@@ -21,7 +21,7 @@ const getAll = async () => {
   return response.data
 }
 
-const create = async (newObject) => {
+const create = async newObject => {
   const config = {
     headers: { Authorization: auth },
   }
@@ -39,7 +39,7 @@ const update = async (id, updatedObject) => {
   return response.data
 }
 
-const remove = async (id) => {
+const remove = async id => {
   const config = {
     headers: { Authorization: auth },
   }
